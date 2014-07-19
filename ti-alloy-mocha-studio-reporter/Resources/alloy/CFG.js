@@ -1,0 +1,1 @@
+module.exports={"dependencies":{},"windowBackgroundColor":"#FFF","mochaTesting":true,"example":"viewNavigation"};

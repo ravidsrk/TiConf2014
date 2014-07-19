@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Building Maintainable Titanium Mobile Apps</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/styles.css" >
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- Any section element inside of this container is displayed as a slide -->
+
+				<section>
+					<br />
+					<br />
+					<h1 class="talk-title">Building Maintainable Titanium Mobile Apps</h1>
+				</section>
+
+				<section>
+					<h1>About Me</h1>
+					<br />
+					<h2>Ravindra Kumar</h2>
+					<p>Self Employed Mobile App Developer, Open Source Addict,</p>
+					<p>Titanium Certified Mobile Developer</p>
+					was <h3>Mobile Architect @ <a href="http://www.cleartrip.com/mobile/">Cleartrip</a></h3>
+					<p>hacker, bug fixer, benchmark runner</p>
+
+					<p>
+						<b>Email:</b> ravidsrk@gmail.com <br />
+						<b>Twitter:</b> @ravidsrk <br />
+						<b>Github:</b> ravidsrk </p>
+
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+
+					<br />
+					<ul>
+						<li>Introduction to Building Maintainable Mobile Apps</li>
+						<li>Unit testing in Titanium</li>
+						<li>Testing with ti-mocha</li>
+						<li>Taking advantage of ti-mocha reporter</li>
+						<li>Demo</li>
+						<li>What next?</li>
+					</ul>
+
+				</section>
+
+				<section>
+
+					<h2>Warning before we start</h2>
+					<br>
+					<ul>
+						<li>Unit testing != TDD</li>
+						<li>Limitations mobile app testing? (UI) </li>
+						<li>Don't write tests against titanium api? (
+						e.g. should(win.open).be.a.Function; )</li>
+						<li>Myths:
+							<ol>
+								<li>Not everything can be tested with unit tests?</li>
+								<li>Projects take longer because of the additional test code that has to be written.</li>
+							</ol>
+						</li>
+					</ul>
+
+					<br>
+					<br>
+					<br>
+					<br>
+					<p>
+						<b>*Caution:</b> Not following advice will result in severe damage and makes me SAY: I TOLD YOU SO :)
+					</p>
+				</section>
+
+				<section>
+					<br>
+					<br>
+					<br>
+					<h2 class="talk-title">Building Maintainable Titanium Apps</h2>
+				</section>
+
+				<section>
+					<h2>Maintainable?? Titanium?? App?? </h2>
+
+					<br />
+					<ul>
+						<li>Ensuring bugs are found fast and automatically via automated tests.</li>
+						<li>Prevent breaking of already tested functionality when adding code or modifying it.</li>
+						<li>Allows for easy refactoring without worrying of breaking changes.</li>
+						<li>Make changes to support new environments operating systems or tools</li>
+						<li>Make it easier for others to maintain the software</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<section>
+					<h2>Unit testing in Titanium?</h2>
+					<ul>
+						<li>Frequent changes in Titainium API/Android SDK/iOS SDK.</li>
+						<li>Helpfull while adopting to new platform which ti going to support in future</li>
+					</ul>
+					<br>
+					<br>
+					<p><b>Jeff Haynie says: </b> TiO2 (Titanium + Oxygen) is the most important oxide, which exists in three important polymorphs; anatase, brookite, and rutile. Oxygen is vital to life on earth -- and so is testing to building great software.</p>
+				</section>
+				</section>
+
+				<section>
+					<h2>Tricks to test Titanium Apps</h2>
+					<ul>
+						<li>Avoid global events and using the titanium namespace for storing things unless necessary</li>
+						<li>Use commonjs modules for everything</li>
+						<li>In the event callbacks, use functions that you can call anytime you want, that way it is a lot easier to share common behaviours and call them anywhere you want</li>
+						<li>Reuse code</li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h1>DEMO</h1>
+				</section>
+
+				<section>
+					<h2>What next?</h2>
+					<ul>
+						<li><a href="https://coderwall.com/p/7lzu4g">Automate Unit Testing a Titanium Alloy project</a></li>
+						<li><a href="http://www.slideshare.net/aaronksaunders/behave-alloy">Simple Unit Testing in Appcelerator Titanium Alloy</a></li>
+						<li><a href="https://github.com/denvers/unit-test-titanium-alloy-project">https://github.com/denvers/unit-test-titanium-alloy-project</a></li>
+						<li><a href="http://billdawson.com/an-appcelerator-titanium-jasmine-javascript-testing-module/">An Appcelerator Titanium Jasmine (Javascript Testing) Module</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Questions?</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
